@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form Dokumentasi Quality</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Library untuk membuat PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Form Dokumentasi Quality</h1>
+            <p>Silakan isi formulir berikut untuk membuat dokumen PDF.</p>
+        </header>
+
+        <form id="documentForm">
+
+            <div class="form-group">
+                <label for="nomor">Nomor Dokumen</label>
+                <input
+                    type="text"
+                    id="nomor"
+                    placeholder="Contoh: QLT-001"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="nama">Nama Pemohon</label>
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Masukkan nama"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="departemen">Departemen</label>
+                <input
+                    type="text"
+                    id="departemen"
+                    placeholder="Masukkan departemen"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal Dokumentasi</label>
+                <input
+                    type="date"
+                    id="tanggal"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="deskripsi">Deskripsi Dokumentasi</label>
+                <textarea
+                    id="deskripsi"
+                    rows="5"
+                    placeholder="Tuliskan deskripsi dokumentasi"
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="btn-generate">
+                Generate PDF
+            </button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
